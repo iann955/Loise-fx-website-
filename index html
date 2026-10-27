@@ -1,1 +1,532 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOISE FX | Trading Academy</title>
+<meta name="description" content="LOISE FX Trading Academy. Learn SNR, SMC, ICT, liquidity and market structure.">
+<style>
+:root {
+  --bg:#050806;
+  --panel:#101713;
+  --green:#20e68a;
+  --gold:#e5bd69;
+  --white:#f5f7f5;
+  --muted:#a3afa7;
+  --border:#25382d;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--bg);color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;line-height:1.6
+}
+header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:16px 5%;border-bottom:1px solid var(--border);
+  background:#080d09;position:sticky;top:0;z-index:10
+}
+.brand{font-weight:900;font-size:21px;letter-spacing:1px}
+.brand span{color:var(--green)}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+a{color:var(--green);text-decoration:none}
+nav a{font-size:13px;color:var(--white)}
+button,.btn{
+  display:inline-block;background:var(--green);color:#031109;
+  padding:12px 17px;border:0;border-radius:7px;
+  font-weight:bold;cursor:pointer;font-size:14px
+}
+button.secondary,.btn.secondary{
+  background:transparent;color:var(--green);
+  border:1px solid var(--green)
+}
+button.gold{background:var(--gold);color:#161006}
+main{max-width:1050px;margin:auto;padding:22px 16px}
+section,.page{margin-bottom:22px}
+.hero{
+  padding:38px 23px;border:1px solid var(--border);
+  border-radius:17px;
+  background:radial-gradient(ellipse at top right,#173b29,#080d09 65%);
+}
+.eyebrow{color:var(--gold);font-size:12px;font-weight:bold;letter-spacing:2px}
+h1{font-size:clamp(32px,7vw,55px);line-height:1.12;margin:13px 0}
+h2{font-size:25px;line-height:1.25}
+h3{margin:5px 0 8px}
+p{color:var(--muted)}
+.card{
+  padding:19px;background:var(--panel);
+  border:1px solid var(--border);border-radius:12px;margin:12px 0
+}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.price{font-size:32px;font-weight:bold;color:var(--gold)}
+.tag{
+  display:inline-block;border:1px solid var(--border);
+  padding:5px 9px;border-radius:20px;color:var(--green);
+  font-size:12px;margin:3px
+}
+label{display:block;margin-top:12px;font-size:13px;color:var(--muted)}
+input,select{
+  width:100%;padding:13px;margin-top:5px;
+  background:#080d09;color:white;border:1px solid var(--border);
+  border-radius:7px;font-size:15px
+}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.small{font-size:12px}
+.hidden{display:none!important}
+.page{display:none}
+.page.active{display:block}
+ul{padding-left:20px}
+li{margin:7px 0}
+footer{
+  border-top:1px solid var(--border);padding:25px 16px;
+  text-align:center;color:var(--muted);font-size:13px
+}
+@media(max-width:600px){
+  header{align-items:flex-start;gap:10px;flex-direction:column}
+  nav{gap:12px}
+  .grid{grid-template-columns:1fr}
+  .hero{padding:27px 18px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">LOISE <span>FX</span></div>
+  <nav>
+    <a href="#home" onclick="go('home')">Home</a>
+    <a href="#curriculum" onclick="go('home');setTimeout(()=>document.getElementById('curriculum').scrollIntoView(),50)">Curriculum</a>
+    <a href="#tuition" onclick="go('home');setTimeout(()=>document.getElementById('tuition').scrollIntoView(),50)">Tuition</a>
+    <a href="#signin" onclick="go('signin')">Sign In</a>
+  </nav>
+</header>
+
+<main>
+
+<div id="home" class="page active">
+  <section class="hero">
+    <div class="eyebrow">TRADING EDUCATION • NOVEMBER 2026</div>
+    <h1>Master the market.<br><span style="color:var(--green)">Trade with a plan.</span></h1>
+    <p>Build your trading knowledge with LOISE FX. Learn market structure, liquidity, SNR, SMC and ICT concepts through structured lessons.</p>
+    <div class="actions">
+      <button onclick="go('register')">CREATE STUDENT ACCOUNT</button>
+      <button class="secondary" onclick="document.getElementById('curriculum').scrollIntoView()">EXPLORE COURSE</button>
+    </div>
+    <p class="small">Classes start 2 November 2026 • Monday–Friday • 8:00 PM–9:30 PM</p>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <span class="tag">01 • STRUCTURE</span>
+      <h3>Read the market</h3>
+      <p>Understand price action, market structure and important trading levels.</p>
+    </div>
+    <div class="card">
+      <span class="tag">02 • LIQUIDITY</span>
+      <h3>Understand liquidity</h3>
+      <p>Study liquidity behaviour and how it relates to price movement.</p>
+    </div>
+    <div class="card">
+      <span class="tag">03 • STRATEGY</span>
+      <h3>Build a process</h3>
+      <p>Learn concepts you can practise and test before risking real money.</p>
+    </div>
+    <div class="card">
+      <span class="tag">04 • LEARNING</span>
+      <h3>Study consistently</h3>
+      <p>Attend weekday classes and follow the course timetable.</p>
+    </div>
+  </section>
+
+  <section id="curriculum">
+    <div class="eyebrow">WHAT YOU WILL LEARN</div>
+    <h2>Course curriculum</h2>
+    <div class="card">
+      <h3>01. Alchemy SNR</h3>
+      <p>Support and resistance concepts, levels and price reactions.</p>
+    </div>
+    <div class="card">
+      <h3>02. Advanced SMC & Price Action</h3>
+      <p>Study smart money concepts and price-action interpretation.</p>
+    </div>
+    <div class="card">
+      <h3>03. ICT Concepts</h3>
+      <p>Explore ICT trading concepts and their use in market analysis.</p>
+    </div>
+    <div class="card">
+      <h3>04. Liquidity & Market Structure</h3>
+      <p>Learn to identify structure and study liquidity behaviour.</p>
+    </div>
+  </section>
+
+  <section id="schedule">
+    <div class="eyebrow">CLASS DETAILS</div>
+    <h2>Your learning schedule</h2>
+    <div class="card">
+      <p><strong style="color:white">Start date:</strong> 2 November 2026</p>
+      <p><strong style="color:white">Days:</strong> Monday to Friday</p>
+      <p><strong style="color:white">Time:</strong> 8:00 PM–9:30 PM</p>
+      <p><strong style="color:white">Duration:</strong> One full month</p>
+      <p><strong style="color:white">Timetable:</strong> Shared after your first deposit.</p>
+    </div>
+  </section>
+
+  <section id="tuition">
+    <div class="eyebrow">SIMPLE PAYMENT PLAN</div>
+    <h2>Course tuition</h2>
+    <div class="card">
+      <div class="tag">ONE-MONTH COURSE</div>
+      <div class="price">KSh 5,000</div>
+      <p>Approximately $40 per month</p>
+      <ul>
+        <li>KSh 2,500 initial enrollment deposit</li>
+        <li>Remaining KSh 2,500 before the end of week two</li>
+        <li>Timetable shared after the first deposit</li>
+        <li>Students who miss the remaining payment deadline may be removed from class.</li>
+      </ul>
+      <button class="gold" onclick="go('register')">ENROLL NOW</button>
+    </div>
+    <div class="card">
+      <h3>M-Pesa payment instructions</h3>
+      <p>Send your payment using the M-Pesa details supplied by the course organiser.</p>
+      <p><strong style="color:white">Payment number:</strong> 0143423002</p>
+      <p>Keep your payment confirmation or screenshot and follow the organiser's instructions to be added to the class.</p>
+      <p class="small">Registration on this demo website does not verify payment automatically.</p>
+    </div>
+  </section>
+
+  <section class="hero">
+    <h2>Ready to begin?</h2>
+    <p>Create your student account to explore the classroom and student dashboard demo.</p>
+    <button onclick="go('register')">CREATE STUDENT ACCOUNT</button>
+  </section>
+</div>
+
+<div id="register" class="page">
+  <div class="card">
+    <div class="eyebrow">STUDENT ENROLLMENT</div>
+    <h2>Create your account</h2>
+    <p>Enter your details to access the website demo.</p>
+    <form id="registerForm">
+      <label>Full name</label>
+      <input id="regName" required placeholder="Enter your full name">
+      <label>Email address</label>
+      <input id="regEmail" type="email" required placeholder="you@example.com">
+      <label>Create password</label>
+      <input id="regPassword" type="password" minlength="8" required placeholder="At least 8 characters">
+      <button type="submit" style="margin-top:18px;width:100%">CREATE ACCOUNT</button>
+    </form>
+    <p class="small">Demo only: this form does not create a secure online account or process payments.</p>
+    <p>Already registered? <a href="#signin" onclick="go('signin')">Sign in</a></p>
+    <button class="secondary" onclick="go('home')">BACK HOME</button>
+  </div>
+</div>
+<div id="signin" class="page">
+  <div class="card">
+    <div class="eyebrow">STUDENT PORTAL</div>
+    <h2>Student Sign In</h2>
+    <p>Sign in to open your LOISE FX student dashboard demo.</p>
+    <form id="signinForm">
+      <label>Email address</label>
+      <input id="loginEmail" type="email" required placeholder="you@example.com">
+      <label>Password</label>
+      <input id="loginPassword" type="password" required placeholder="Enter your password">
+      <button type="submit" style="margin-top:18px;width:100%">SIGN IN</button>
+    </form>
+    <p class="small">Demo sign-in only. This is not secure real authentication.</p>
+    <p>New student? <a href="#register" onclick="go('register')">Create account</a></p>
+    <button class="secondary" onclick="go('home')">BACK HOME</button>
+  </div>
+</div>
+
+<div id="dashboard" class="page">
+  <section class="hero">
+    <div class="eyebrow">LOISE FX • STUDENT AREA</div>
+    <h1>Welcome, <span id="welcomeName" style="color:var(--green)">Student</span></h1>
+    <p>Your learning journey starts here. Use the menu below to explore your course.</p>
+    <span class="tag">COURSE: ONE MONTH</span>
+    <span class="tag">STATUS: DEMO ACCOUNT</span>
+  </section>
+
+  <section class="grid">
+    <div class="card">
+      <h3>My Profile</h3>
+      <p>View your saved demo student details.</p>
+      <button onclick="go('profile')">OPEN PROFILE</button>
+    </div>
+    <div class="card">
+      <h3>Classroom</h3>
+      <p>Open the classroom information page.</p>
+      <button onclick="go('classroom')">OPEN CLASSROOM</button>
+    </div>
+    <div class="card">
+      <h3>Timetable</h3>
+      <p>Classes are scheduled Monday to Friday, 8:00 PM–9:30 PM.</p>
+      <button class="secondary" onclick="go('home');setTimeout(()=>document.getElementById('schedule').scrollIntoView(),50)">VIEW SCHEDULE</button>
+    </div>
+    <div class="card">
+      <h3>Curriculum</h3>
+      <p>Review the subjects covered in the course.</p>
+      <button class="secondary" onclick="go('home');setTimeout(()=>document.getElementById('curriculum').scrollIntoView(),50)">VIEW CURRICULUM</button>
+    </div>
+    <div class="card">
+      <h3>Tuition & Payment</h3>
+      <p>Review the course fee and payment plan.</p>
+      <button class="secondary" onclick="go('home');setTimeout(()=>document.getElementById('tuition').scrollIntoView(),50)">VIEW TUITION</button>
+    </div>
+    <div class="card">
+      <h3>IAN XAU AI</h3>
+      <p>Visit the trading bot website.</p>
+      <a class="btn" href="https://ian-xau-bot.onrender.com/" target="_blank" rel="noopener">OPEN BOT WEBSITE</a>
+    </div>
+  </section>
+
+  <div class="card">
+    <h3>Student reminder</h3>
+    <p>Complete the course payment according to the organiser's payment plan. Registration alone does not confirm payment or guarantee class admission.</p>
+    <button class="secondary" onclick="signOut()">SIGN OUT</button>
+  </div>
+</div>
+
+<div id="profile" class="page">
+  <div class="card">
+    <div class="eyebrow">STUDENT DETAILS</div>
+    <h2>My Profile</h2>
+    <p><strong style="color:white">Full name:</strong> <span id="profileName">Not available</span></p>
+    <p><strong style="color:white">Email:</strong> <span id="profileEmail">Not available</span></p>
+    <p><strong style="color:white">Account:</strong> Browser demo</p>
+    <p class="small">These details are saved only for this browser session. They are not stored in a secure student database.</p>
+    <div class="actions">
+      <button onclick="go('dashboard')">BACK TO DASHBOARD</button>
+      <button class="secondary" onclick="signOut()">SIGN OUT</button>
+    </div>
+  </div>
+</div>
+
+<div id="classroom" class="page">
+  <section class="hero">
+    <div class="eyebrow">LOISE FX LEARNING SPACE</div>
+    <h1>Student <span style="color:var(--green)">Classroom</span></h1>
+    <p>Use this page for class information and access details.</p>
+  </section>
+
+  <div class="card">
+    <h3>Live class connection</h3>
+    <p id="classStatus">Class link coming soon.</p>
+    <button class="gold" onclick="joinClass()">JOIN LIVE CLASS</button>
+    <p class="small">The organiser must provide and connect the real class link before students can join an actual live lesson.</p>
+  </div>
+
+  <div class="card">
+    <h3>Class schedule</h3>
+    <p><strong style="color:white">Start date:</strong> 2 November 2026</p>
+    <p><strong style="color:white">Days:</strong> Monday–Friday</p>
+    <p><strong style="color:white">Time:</strong> 8:00 PM–9:30 PM</p>
+    <p><strong style="color:white">Duration:</strong> One month</p>
+  </div>
+
+  <div class="card">
+    <h3>Course subjects</h3>
+    <ul>
+      <li>Alchemy SNR</li>
+      <li>Advanced SMC & Price Action</li>
+      <li>ICT Concepts</li>
+      <li>Liquidity and Market Structure</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Payment reminder</h3>
+    <p>Monthly tuition: KSh 5,000.</p>
+    <p>Initial deposit: KSh 2,500. Remaining balance: KSh 2,500 before the end of week two.</p>
+    <button class="secondary" onclick="go('home');setTimeout(()=>document.getElementById('tuition').scrollIntoView(),50)">PAYMENT INSTRUCTIONS</button>
+  </div>
+
+  <button onclick="go('dashboard')">BACK TO DASHBOARD</button>
+</div>
+
+
+<footer>
+  <p><strong style="color:white">LOISE FX</strong> — Trading Education</p>
+  <p>In coordination with <strong style="color:var(--gold)">Ian Ke</strong></p>
+  <p>
+    <a href="https://ian-xau-bot.onrender.com/" target="_blank" rel="noopener">
+      IAN XAU AI Trading Bot
+    </a>
+  </p>
+  <p class="small">Trading involves risk. Education does not guarantee profits.</p>
+</footer>
+
+<script>
+const pages = [
+  "home",
+  "register",
+  "signin",
+  "dashboard",
+  "profile",
+  "classroom"
+];
+
+let currentUser = null;
+
+function go(page) {
+  if (!pages.includes(page)) page = "home";
+
+  if (
+    (page === "dashboard" ||
+     page === "profile" ||
+     page === "classroom") &&
+    !currentUser
+  ) {
+    page = "signin";
+  }
+
+  document.querySelectorAll(".page").forEach(function(item) {
+    item.classList.remove("active");
+  });
+
+  const selectedPage = document.getElementById(page);
+
+  if (selectedPage) {
+    selectedPage.classList.add("active");
+  }
+
+  if (page === "dashboard" || page === "profile") {
+    updateStudentDetails();
+  }
+
+  window.location.hash = page;
+  window.scrollTo(0, 0);
+}
+
+function updateStudentDetails() {
+  if (!currentUser) return;
+
+  document.getElementById("welcomeName").textContent =
+    currentUser.name;
+
+  document.getElementById("profileName").textContent =
+    currentUser.name;
+
+  document.getElementById("profileEmail").textContent =
+    currentUser.email;
+}
+
+document.getElementById("registerForm").addEventListener(
+  "submit",
+  function(event) {
+    event.preventDefault();
+
+    const name =
+      document.getElementById("regName").value.trim();
+
+    const email =
+      document.getElementById("regEmail").value.trim();
+
+    const password =
+      document.getElementById("regPassword").value;
+
+    if (!name || !email || password.length < 8) {
+      alert("Enter your name, a valid email and a password of at least 8 characters.");
+      return;
+    }
+
+    currentUser = {
+      name: name,
+      email: email
+    };
+
+    sessionStorage.setItem(
+      "loiseFxDemoUser",
+      JSON.stringify(currentUser)
+    );
+
+    document.getElementById("registerForm").reset();
+
+    alert("Demo account created. Welcome to LOISE FX!");
+
+    go("dashboard");
+  }
+);
+
+document.getElementById("signinForm").addEventListener(
+  "submit",
+  function(event) {
+    event.preventDefault();
+
+    const email =
+      document.getElementById("loginEmail").value.trim();
+
+    const password =
+      document.getElementById("loginPassword").value;
+
+    if (!email || !password) {
+      alert("Enter your email and password.");
+      return;
+    }
+
+    let savedUser = null;
+
+    try {
+      savedUser = JSON.parse(
+        sessionStorage.getItem("loiseFxDemoUser")
+      );
+    } catch (error) {
+      savedUser = null;
+    }
+
+    if (savedUser && savedUser.email.toLowerCase() === email.toLowerCase()) {
+      currentUser = savedUser;
+    } else {
+      currentUser = {
+        name: email.split("@")[0],
+        email: email
+      };
+    }
+
+    document.getElementById("signinForm").reset();
+
+    alert("Demo sign-in successful.");
+
+    go("dashboard");
+  }
+);
+
+function signOut() {
+  currentUser = null;
+  sessionStorage.removeItem("loiseFxDemoUser");
+  alert("You have signed out.");
+  go("home");
+}
+
+function joinClass() {
+  alert(
+    "The live class link has not been added yet. " +
+    "Please get the real class link from the course organiser."
+  );
+}
+
+window.addEventListener("load", function() {
+  try {
+    const savedUser = sessionStorage.getItem("loiseFxDemoUser");
+
+    if (savedUser) {
+      currentUser = JSON.parse(savedUser);
+    }
+  } catch (error) {
+    currentUser = null;
+  }
+
+  const requestedPage = window.location.hash.replace("#", "");
+
+  if (pages.includes(requestedPage)) {
+    go(requestedPage);
+  } else {
+    go("home");
+  }
+});
+</script>
+
+</main>
+</body>
+</html>
